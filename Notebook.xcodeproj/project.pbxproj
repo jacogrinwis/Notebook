@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44BA109EF8FA346641EE6ED8 /* Pods_Notebook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4C96BA3110B996F72381FA /* Pods_Notebook.framework */; };
 		716631D01F79290000035AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716631CF1F79290000035AAC /* AppDelegate.swift */; };
 		716631D21F79290000035AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716631D11F79290000035AAC /* ViewController.swift */; };
 		716631D41F79290000035AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716631D31F79290000035AAC /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22BEFF2D2CF4DDC02F4F8355 /* Pods-Notebook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notebook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notebook/Pods-Notebook.debug.xcconfig"; sourceTree = "<group>"; };
+		2E4C96BA3110B996F72381FA /* Pods_Notebook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Notebook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FC6741645C68CF77849C09A /* Pods-Notebook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notebook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Notebook/Pods-Notebook.release.xcconfig"; sourceTree = "<group>"; };
 		716631CC1F79290000035AAC /* Notebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716631CF1F79290000035AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716631D11F79290000035AAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BA109EF8FA346641EE6ED8 /* Pods_Notebook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,8 @@
 			children = (
 				716631CE1F79290000035AAC /* Notebook */,
 				716631CD1F79290000035AAC /* Products */,
+				CD07FEB3BF3B7C8A19E71681 /* Pods */,
+				E72BDF78E6478310458F00B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +70,23 @@
 			path = Notebook;
 			sourceTree = "<group>";
 		};
+		CD07FEB3BF3B7C8A19E71681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22BEFF2D2CF4DDC02F4F8355 /* Pods-Notebook.debug.xcconfig */,
+				5FC6741645C68CF77849C09A /* Pods-Notebook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E72BDF78E6478310458F00B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4C96BA3110B996F72381FA /* Pods_Notebook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,9 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716631DC1F79290000035AAC /* Build configuration list for PBXNativeTarget "Notebook" */;
 			buildPhases = (
+				4713F7C30B88039B22DE75FB /* [CP] Check Pods Manifest.lock */,
 				716631C81F79290000035AAC /* Sources */,
 				716631C91F79290000035AAC /* Frameworks */,
 				716631CA1F79290000035AAC /* Resources */,
+				E7091BB6523FB90E29CC6829 /* [CP] Embed Pods Frameworks */,
+				057C696723E867B190A48896 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		057C696723E867B190A48896 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notebook/Pods-Notebook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4713F7C30B88039B22DE75FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7091BB6523FB90E29CC6829 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Notebook/Pods-Notebook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		716631C81F79290000035AAC /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		716631DD1F79290000035AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BEFF2D2CF4DDC02F4F8355 /* Pods-Notebook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Notebook/Notebook.entitlements;
@@ -277,6 +353,7 @@
 		};
 		716631DE1F79290000035AAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FC6741645C68CF77849C09A /* Pods-Notebook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Notebook/Notebook.entitlements;
